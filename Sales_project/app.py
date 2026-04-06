@@ -61,7 +61,7 @@ st.markdown("Interactive dashboard for analyzing sales performance.")
 
 @st.cache_data
 def load_data():
-    return pd.read_csv("data/cleaned_sales.csv")
+    return pd.read_csv("Sales_project/data/cleaned_sales.csv")
 
 df = load_data()
 
