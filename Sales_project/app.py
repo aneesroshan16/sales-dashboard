@@ -375,7 +375,7 @@ with st.form("add_sales_form", clear_on_submit=True):
             order_date  = datetime.date(int(new_year), int(new_month), 1).strftime("%Y-%m-%d")
 
             # Build new row matching existing CSV columns
-            existing_df  = pd.read_csv(DATA_PATH)
+            existing_df  = pd.read_csv("data/cleaned_sales.csv")
             new_order_id = int(existing_df["Order ID"].max()) + 1 if "Order ID" in existing_df.columns else 1
 
             new_row = {col: "" for col in existing_df.columns}
